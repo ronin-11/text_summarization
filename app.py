@@ -3,6 +3,7 @@ import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from heapq import nlargest
+import docx2txt
 
 # Load the spaCy model and stopwords
 nlp = spacy.load('en_core_web_sm')
@@ -53,9 +54,16 @@ def main():
     st.title("Text Summarization App")
     st.write("Upload a document and get a summary!")
 
-    uploaded_file = st.file_uploader("Upload a file", type=["txt"])
+    uploaded_file = st.file_uploader("Upload a file", type=["txt", "docx"])
     if uploaded_file is not None:
-        text = uploaded_file.read().decode('utf-8')
+        file_extension = uploaded_file.name.split(".")[-1].lower()
+        if file_extension == "txt":
+            try:
+                text = uploaded_file.read().decode('utf-8')
+            except UnicodeDecodeError:
+                text = uploaded_file.read().decode('latin-1')
+        elif file_extension == "docx":
+            text = docx2txt.process(uploaded_file)
 
         if st.button("Summarize"):
             summary = text_summarization(text)
