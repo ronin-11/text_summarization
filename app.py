@@ -53,7 +53,7 @@ def main():
     st.title("Text Summarization App")
     st.write("Upload a document and get a summary!")
 
-    uploaded_file = st.file_uploader("Upload a file", type=["txt"])
+    uploaded_file = st.file_uploader("Upload a file", type=["txt","docx"])
     if uploaded_file is not None:
         text = uploaded_file.read().decode('utf-8')
 
