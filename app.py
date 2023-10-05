@@ -22,6 +22,10 @@ def text_summarization(text):
             else:
                 word_frequencies[word.text] += 1
 
+    # Check if word_frequencies is empty
+    if not word_frequencies:
+        return "No text to summarize."
+
     # Calculate maximum word frequency
     max_frequency = max(word_frequencies.values())
 
