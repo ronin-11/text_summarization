@@ -1,3 +1,8 @@
+##Link to the streamlit app
+https://textsummarization-erhr97ds4ujdtcx4wpqqel.streamlit.app/
+
+##Link to the youtube video demonstrating how the app works
+https://youtu.be/XcJTWnXc0LI
 
 # Text_Summarization App
 
