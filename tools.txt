@@ -1,0 +1,5 @@
+1.Streamlit: Streamlit is a Python framework used for building interactive web applications
+
+2.spaCy: spaCy is an open-source library for natural language processing (NLP) in Python. It provides efficient and accurate NLP capabilities, including tokenization, part-of-speech tagging, named entity recognition, and dependency parsing. In this application, spaCy is used to perform text processing and analysis for text summarization.
+
+3.docx2txt: docx2txt is a Python library that allows you to extract text from Microsoft Word (.docx) files. It provides a convenient way to convert the contents of Word documents into plain text, which can then be used for further processing or analysis.
